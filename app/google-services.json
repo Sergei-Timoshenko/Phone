@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "165545267580",
+    "project_id": "phone-1244e",
+    "storage_bucket": "phone-1244e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165545267580:android:5d846380fb63d7ba8fd4f9",
+        "android_client_info": {
+          "package_name": "dev.sergeitimoshenko.phone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165545267580-kild7cs1sp3aug9rvioa6dbav0ttj69d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.sergeitimoshenko.phone",
+            "certificate_hash": "2bfb349d4ef317e380915136a29656d51c68a9f4"
+          }
+        },
+        {
+          "client_id": "165545267580-u3mubec8lnrae0o756e16g24gc1smt7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1Yjf6VGb8YVrb1cQIHIPbbI4glIgvjaY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165545267580-u3mubec8lnrae0o756e16g24gc1smt7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

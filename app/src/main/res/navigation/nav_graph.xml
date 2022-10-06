@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactsFragment">
+
+    <fragment
+        android:id="@+id/keypadFragment"
+        android:name="dev.sergeitimoshenko.phone.ui.keypad.KeypadFragment"
+        android:label="fragment_keypad"
+        tools:layout="@layout/fragment_keypad" >
+        <action
+            android:id="@+id/action_keypadFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+        <action
+            android:id="@+id/action_keypadFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContactFragment"
+        android:name="dev.sergeitimoshenko.phone.ui.add.AddContactFragment"
+        android:label="fragment_add_contact"
+        tools:layout="@layout/fragment_add_contact" >
+        <argument
+            android:name="phoneNumber"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isFavourite"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="dev.sergeitimoshenko.phone.ui.contacts.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" >
+        <action
+            android:id="@+id/action_contactsFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_updateContactFragment"
+            app:destination="@id/updateContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="dev.sergeitimoshenko.phone.ui.favourites.FavouritesFragment"
+        android:label="fragment_favourites"
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_updateContactFragment"
+            app:destination="@id/updateContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateContactFragment"
+        android:name="dev.sergeitimoshenko.phone.ui.update.UpdateContactFragment"
+        android:label="fragment_update_contact"
+        tools:layout="@layout/fragment_update_contact" >
+        <argument
+            android:name="contact"
+            app:argType="dev.sergeitimoshenko.phone.models.Contact" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="dev.sergeitimoshenko.phone.ui.contact.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" >
+        <argument
+            android:name="contact"
+            app:argType="dev.sergeitimoshenko.phone.models.Contact" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="-1" />
+        <argument
+            android:name="phoneNumber"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_contactFragment_to_updateContactFragment"
+            app:destination="@id/updateContactFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.keypad.KeypadFragment"
+    tools:layout_editor_absoluteX="-27dp"
+    tools:layout_editor_absoluteY="-65dp">
+
+    <TextView
+        android:id="@+id/tv_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="380689995803" />
+
+    <TextView
+        android:id="@+id/tv_contact_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/light_blue"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ibtn_add_contact"
+        style="@style/image_button"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Add contact"
+        android:src="@drawable/ic_add_contact"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cv_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_one"
+        style="@style/keypad_button"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_four"
+        app:layout_constraintEnd_toStartOf="@+id/cv_two"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="1" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_two"
+        style="@style/keypad_button"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_five"
+        app:layout_constraintEnd_toStartOf="@+id/cv_three"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv_one"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="2" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_three"
+        style="@style/keypad_button"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_six"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv_two"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="3" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_four"
+        style="@style/keypad_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_seven"
+        app:layout_constraintEnd_toStartOf="@+id/cv_five"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_one">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="4" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_five"
+        style="@style/keypad_button"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_eight"
+        app:layout_constraintEnd_toStartOf="@+id/cv_six"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv_four"
+        app:layout_constraintTop_toBottomOf="@+id/cv_two">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="5" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_six"
+        style="@style/keypad_button"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_nine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv_five"
+        app:layout_constraintTop_toBottomOf="@+id/cv_three">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="6" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_seven"
+        style="@style/keypad_button"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cv_eight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_four">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="7" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_eight"
+        style="@style/keypad_button"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cv_nine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv_seven"
+        app:layout_constraintTop_toBottomOf="@+id/cv_five">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="8" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_nine"
+        style="@style/keypad_button"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cv_eight"
+        app:layout_constraintTop_toBottomOf="@+id/cv_six">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="9" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_zero"
+        style="@style/keypad_button"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintEnd_toEndOf="@+id/cv_eight"
+        app:layout_constraintStart_toStartOf="@+id/cv_eight"
+        app:layout_constraintTop_toBottomOf="@+id/cv_eight">
+
+        <TextView
+            style="@style/keypad_digit"
+            android:text="0" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_call"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/green"
+        android:visibility="gone"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintEnd_toStartOf="@+id/cv_zero"
+        app:layout_constraintTop_toBottomOf="@+id/cv_seven"
+        tools:visibility="visible">
+
+        <ImageView
+            style="@style/image_button"
+            android:layout_gravity="center"
+            android:contentDescription="call"
+            android:src="@drawable/ic_call"
+            app:tint="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_remove"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/red"
+        android:visibility="gone"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintStart_toEndOf="@+id/cv_zero"
+        app:layout_constraintTop_toBottomOf="@+id/cv_nine"
+        tools:visibility="visible">
+
+        <ImageView
+            style="@style/image_button"
+            android:contentDescription="remove"
+            android:src="@drawable/ic_remove"
+            app:tint="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
